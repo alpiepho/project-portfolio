@@ -1,2 +1,415 @@
-<!-- add here -->
+<!DOCTYPE html>
+<html >
 
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+  <title>CodePen - Personal Portfolio Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Rock+Salt'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <style>
+      @media (max-width: 62em) {
+  .navbar-nav {
+    padding-top: .425rem;
+    padding-left: 0.75rem;
+  }
+
+  .navbar-nav .nav-item {
+    float: none;
+  }
+
+  .navbar-brand {
+    float: right;
+  }
+
+  .navbar-brand,
+  .navbar-nav .nav-item {
+    display: block;
+  }
+
+  .navbar-nav .nav-item + .nav-item {
+    margin-left: 0;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    float: none;
+  }
+}
+/* Color Palette
+#1E49A8 -  30,  73, 168 - Denim Blue
+#56B2DD -  86, 178, 221 - Blue Jeans
+#2F79B5 -  47, 121, 181 - Steel Blue
+#465775 -  70,  87, 117 - Independence
+#062056 -  06,  20,  86 - Oxford Blue
+#BBBBBB - 187, 187, 187 - lighter gray
+*/
+body {
+  color: #BBBBBB;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home, .about, .portfolio, .contact {
+  min-height: 900px;
+}
+
+h1 {
+  font-family: 'Rock Salt', cursive;
+  margin-top: 70px;
+}
+
+.home {
+  background-color: #1E49A8;
+  width: 100%;
+}
+
+.home img {
+  border-radius: 5%;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.home h1 {
+  font-size: 5em;
+  margin-top: 100px;
+}
+
+.home-sub-title {
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.5em;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+.about {
+  color: white;
+  background: url("https://images.unsplash.com/photo-1437915219556-8c287594737a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-description {
+  font-size: 1.5em;
+  margin-right: 20px;
+  margin-top: 100px;
+}
+
+.portfolio {
+  color: white;
+  background: url("https://images.unsplash.com/uploads/1412750321034baa5d127/d35c5980?dpr=1&auto=format&fit=crop&w=1500&h=845&q=80&cs=tinysrgb&crop=&bg=") center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portfolio-description {
+  font-size: 1.5em;
+  margin-left: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.picture-grid p {
+  font-size: 1em;
+  text-align: center;
+  width: 80%;
+}
+
+.picture-grid strong {
+  color: black;
+}
+
+.picture-grid img {
+  width: 70%;
+  border-radius: 5%;
+}
+
+#port-qrcode {
+  float: right;
+  margin-right: 100px;
+  width: 75px;
+}
+
+.portfolio-note {
+  font-size: 1em;
+  text-align: center;
+}
+
+.contact {
+  color: white;
+  background: url("https://images.unsplash.com/photo-1488487418851-af30939c47ce?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: -40px;
+}
+
+.contact-description {
+  font-size: 1.5em;
+}
+
+.contact-icon {
+  color: white;
+  font-size: 2em;
+  margin-top: 30px;
+}
+
+.contact-icon a {
+  color: white;
+}
+
+    </style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+
+
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+</head>
+
+<body translate="no" >
+
+   <!-- .navbar -->
+<nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-primary">
+	<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">
+	&#9776;
+	</button>
+	<div class="collapse navbar-toggleable-md" id="mainNavbarCollapse">
+		<ul class="nav navbar-nav pull-lg-right">
+			<li class="nav-item">
+				<a rel="nofollow" rel="noreferrer"class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a rel="nofollow" rel="noreferrer"class="nav-link" href="#about">About</a>
+			</li>
+			<li class="nav-item">
+				<a rel="nofollow" rel="noreferrer"class="nav-link" href="#portfolio">Portfolio</a>
+			</li>
+      <!--
+			<li class="nav-item dropdown">
+				<a rel="nofollow" rel="noreferrer"class="nav-link" id="navbarDropdown1" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+					<li><a rel="nofollow" rel="noreferrer"class="dropdown-item" href="#">Action</a></li>
+					<li><a rel="nofollow" rel="noreferrer"class="dropdown-item" href="#">Another action</a></li>
+					<li><a rel="nofollow" rel="noreferrer"class="dropdown-item" href="#">Something else here</a></li>
+				</ul>
+			</li>
+      -->
+			<li class="nav-item">
+				<a rel="nofollow" rel="noreferrer"class="nav-link" href="#contact">Contact</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+<!-- /.navbar -->
+
+<div class="container-fluid">
+  <div id="home" class="home">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="nav-image img-rounded" src="https://avatars1.githubusercontent.com/u/10007673?v=3&s=400">
+      </div>
+      <div class="col-md-6">
+        <h1>Al Piepho</h1>
+        <div class="home-sub-title">
+        Software | Firmware | HTML | CSS | Javascript | Ruby | C | Embedded | Aspiring Full-Stack | Northern CO
+        </div>
+       </div>
+    </div>
+  </div> <!-- home -->
+
+  <div id="about" class="about">
+    <div class="row">
+     <div class="col-md-6 col-md-offset-6">
+       <h1>About</h1>
+       <div class="about-description">
+         <p>
+        I am a problem solver, looking for a position as a Web Full-Stack developer. Significant experience in programming and problem solving, from very low level Embedded Systems thru Web Applications.
+         </p>
+         <p>
+           <em>"code is just a spectrum...same concepts, just different syntax..."</em>
+         </p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- about -->
+
+  <div id="portfolio" class="portfolio">
+    <div class="row">
+     <div class="col-md-6">
+      <h1>Portfolio</h1>
+       <p class="portfolio-description">
+These are some of the projects I have worked on recently. I expect this list to show my progression of interests as I learn what it means to be a Full Stack Web Developer.
+       </p>
+      </div>
+    </div>
+    <div class="row picture-grid">
+
+      <!-- gc-app -->
+      <div class="col-md-6">
+        <p>
+<strong>Jan 2017:</strong> A Ruby based application to automate gathering baseball game data from an online service for youth/prep baseball teams. This tool uses the Watir Ruby Gem, an implementation of the Selenium API for automated web site testing. This is used to navigate to all the pages and scrap data from each page.
+       </p>
+       <p>
+         <a rel="nofollow" rel="noreferrer"href="https://github.com/apiepho/gc_app" target="_blank">
+           <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gc-app.png?raw=true">
+         </a>
+       </p>
+     </div>
+
+      <!-- sample-app -->
+      <div class="col-md-6">
+        <p>
+<strong>Jan 2017:</strong> This is my implementation of the full sample_app from the 'Ruby on Rails Tutorial' by Michael Hartl. This is a wellknown online book for learning Ruby on Rails. The book is 700 pages long and works through designing a Rails application that is a mini version of Twitter, complete with multiple views and database store.
+       </p>
+       <p>
+          <a rel="nofollow" rel="noreferrer"href="http://bit.ly/thatname-group-portfolio-sample-app" target="_blank">
+           <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-sample-app.png?raw=true">
+          </a>
+       </p>
+      </div>
+
+
+       <!-- player-template -->
+     <div class="col-md-6">
+        <p>
+<strong>Feb 2017:</strong> This is Ruby on Rails application that mirrors an existing Wordpress site used to promote a high school baseball player to prospective college coaches. This site was designed to be a template for other players. The player data is read from a configuration file on the site and populated to the Rails files.
+       </p>
+       <p>
+          <a rel="nofollow" rel="noreferrer"href="http://bit.ly/thatname-group-portfolio-player-template" target="_blank">
+           <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-player-template.png?raw=true">
+          </a>
+       </p>
+      </div>
+
+      <!-- terms3 -->
+      <div class="col-md-6">
+        <p>
+<strong>Mar 2017:</strong> This is the 3rd iteration of an application concept to keep a list of technical terms along with description, notes, and related links. This is loosely based on the Angular2 'Heroes' tutorial. It uses a nAngular2 front end, Node and Express for a simple server, and MongoDB on the backend for storing list. Also wrote tools to save and reset/populate the DB.
+       </p>
+      <p>
+        <a rel="nofollow" rel="noreferrer"href="http://bit.ly/thatname-group-portfolio-terms3" target="_blank">
+         <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-terms3.png?raw=true">
+        </a>
+       </p>
+      </div>
+
+      <!-- rpn-hex-calc -->
+      <div class="col-md-6">
+        <p>
+<strong>Apr 2017:</strong> A simple reverse-polish-notation hex calculator Chrome Extension. Allows quick access to do simple hex operations and see the decimal value. Written in HTML, JavaScript, and jQuery. Also includes a Ruby/Watir Selenium test framework to verify all operations in a browser.
+       </p>
+       <p>
+        <a rel="nofollow" rel="noreferrer"href="https://github.com/apiepho/rpn_hex_calc" target="_blank">
+         <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-rpn-hex-calc.png?raw=true">
+        </a>
+       </p>
+      </div>
+
+      <!-- tribute -->
+      <div class="col-md-6">
+        <p>
+<strong>May 2017:</strong> The first project for freeCodeCamp, Basic Front End Development, is a simple HTML with Bootstrap CSS to create a tribute. I chose to build a tribute to an old science fiction book I read...and with all the talk of machine-learning and A.I., this book rings more and true.
+       </p>
+       <p>
+        <a rel="nofollow" rel="noreferrer"href="https://codepen.io/sd3x/full/Njvvrj/" target="_blank">
+         <img src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-tribute.png?raw=true">
+        </a>
+       </p>
+      </div>
+
+      <!-- portfolio -->
+      <div class="col-md-6">
+         <img id="port-qrcode" alt="QR code" src="https://chart.googleapis.com/chart?chf=bg,s,ffffff&amp;cht=qr&amp;chs=120x120&amp;chl=https://codepen.io/sd3x/full/bWoGYG/&amp;chld=|0">
+        <p>
+<strong>May 2017:</strong> The second project for freeCodeCamp, Basic Front End Development, This portfolio page migrated to GitHub and GH Pages (soon, with a bit.ly alias).
+       </p>
+       <p>
+        <a rel="nofollow" rel="noreferrer"href="https://codepen.io/sd3x/full/bWoGYG/" target="_blank">
+         <img id="port-img" src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-project-portfolio.png?raw=true">
+        </a>
+       </p>
+      </div>
+
+    </div> <!-- row picture-grid -->
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <p class="portfolio-note">
+        (Click on the image to go to that site. Most of the sites above are hosted on the free service of Heroku. This service will disable or 'sleep' the host virtual machine. My experiments show that the first access web can take 15-30 seconds longer due to the sites dyno waking up.)
+        </p>
+      </div>
+    </div>
+  </div> <!-- portfolio -->
+
+  <div id="contact" class="contact">
+    <div class="row">
+     <div class="col-md-6 col-md-offset-6">
+        <h1>Contact</h1>
+        <div class="contact-description">
+Please contact me at one of my accounts.  I am very responsive...if not totally sucked into coding :)
+       </div>
+      </div>
+
+      <div class="row contact-icon">
+        <div class="col-md-3 col-md-offset-3">
+         <i class="fa fa-linkedin" aria-hidden="true"></i>  <a rel="nofollow" rel="noreferrer"href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Linkedin</a>
+        </div>
+       </div>
+       <div class="row contact-icon">
+        <div class="col-md-3 col-md-offset-3">
+         <i class="fa fa-fire" aria-hidden="true"></i>  <a rel="nofollow" rel="noreferrer"href="https://www.freecodecamp.com/apiepho" target="_blank">FreeCodeCamp</a>
+        </div>
+       </div>
+      <div class="row contact-icon">
+        <div class="col-md-3 col-md-offset-3">
+         <i class="fa fa-codepen" aria-hidden="true"></i>  <a rel="nofollow" rel="noreferrer"href="https://codepen.io/sd3x/" target="_blank">CodePen</a>
+        </div>
+       </div>
+      <div class="row contact-icon">
+        <div class="col-md-3 col-md-offset-3">
+          <i class="fa fa-github" aria-hidden="true"></i>  <a rel="nofollow" rel="noreferrer"href="https://github.com/alpiepho" target="_blank">Github</a>
+        </div>
+       </div>
+
+     </div>
+  </div> <!-- contact -->
+
+  <footer>
+    <hr>
+    <div class="row">
+     <div class="col-md-6 col-md-offset-4">
+    <p class="text-right">
+    Page built by
+    <a rel="nofollow" rel="noreferrer"href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Al Piepho</a>       <em> (Aspiring Full Stack Developer) 2017</em>
+    </p>
+      </div>
+    </div>
+   </footer>
+
+</div> <!-- container-fluid -->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>
+
+
+
+
+
+</body>
+</html>

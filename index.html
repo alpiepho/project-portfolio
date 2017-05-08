@@ -12,10 +12,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js'>
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>
-<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Rock+Salt'>
-<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js'>
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Rock+Salt'>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <!-- fixes error in chrome, but I still need to understand this -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
       <style>
       @media (max-width: 62em) {
@@ -56,6 +60,7 @@
 */
 body {
   color: #BBBBBB;
+  margin: 0;
 }
 
 .container-fluid {
@@ -117,13 +122,13 @@ h1 {
 
 .portfolio-description {
   font-size: 1.5em;
-  margin-left: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .picture-grid p {
   font-size: 1em;
+  margin-left: 50px;
   text-align: center;
   width: 80%;
 }

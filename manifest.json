@@ -1,5 +1,15 @@
 {
-  "short_name": "AlPiepho",
+  "background_color": "blue",
+  "description": "Project Portfolio for Al Piepho",
+  "display": "browser",
+  "icons": [],
+  "lang": "en-US",
   "name": "Al Piepho | Portfolio",
-  "start_url": "index.html#home"
+  "prefer_related_applications": false,
+  "related_applications": [{
+    "platform": "web"
+  }],
+  "short_name": "AlPiepho",
+  "start_url": ".",
+  "theme_color": "blue"
 }

@@ -1,7 +1,7 @@
 {
   "background_color": "blue",
   "description": "Project Portfolio for Al Piepho",
-  "display": "browser",
+  "display": "standalone",
   "icons": [],
   "lang": "en-US",
   "name": "Al Piepho | Portfolio",

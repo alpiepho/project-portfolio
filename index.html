@@ -83,7 +83,7 @@ body {
   padding-right: 0px;
 }
 
-.home, .about, .portfolio, .contact {
+.home, .about, .portfolio, .podcasts, .contact {
   color: white;
   min-height: 900px;
 }
@@ -163,6 +163,11 @@ h1 {
   border-radius: 5%;
 }
 
+.picture-grid-small img {
+  max-width: 100px;
+  border-radius: 5%;
+}
+
 .picture-grid a {
   color: black;
 }
@@ -174,6 +179,17 @@ h1 {
   overflow: hidden;
 }
 
+.picture-grid-item-small {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 100px;
+}
+
+.picture-grid-item-small p {
+  font-size: 1.1em;
+}
+
+
 #port-qrcode {
   float: right;
   margin-right: 100px;
@@ -183,6 +199,23 @@ h1 {
 .portfolio-note {
   font-size: 1em;
   text-align: center;
+}
+
+.podcasts {
+  color: white;
+  background-color: #1E49A8;
+  width: 100%;
+}
+
+.podcasts h1 {
+  margin-left: 50px;
+}
+
+.podcasts-description {
+  font-size: 1.5em;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .contact {
@@ -238,16 +271,23 @@ img[data-src] {
   .home,
   .about,
   .portfolio,
+  .podcasts,
   .contact {
-    padding-bottom: 70px;
-    padding-top: 70px;
+    padding-bottom: 120px;
+    padding-top: 120px;
     min-height: 200px;
-}
+  }
+
+  .picture-grid-item-small {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 100px;
+  }
 
   .home img {
     display: none;
   }
-
+}
     </style>
 
   <script>
@@ -281,6 +321,9 @@ img[data-src] {
 			</li>
 			<li class="nav-item">
 				<a rel="noopener" class="nav-link" href="#portfolio">Portfolio</a>
+			</li>
+      <li class="nav-item">
+				<a rel="noopener" class="nav-link" href="#podcasts">Podcasts</a>
 			</li>
       <!--
 			<li class="nav-item dropdown">
@@ -349,14 +392,15 @@ These are some of the projects I have worked on recently. I expect this list to 
       </div>
     </div>
 
+
+
+
+
+
+
+
+
     <div class="row picture-grid">
-
-
-
-
-
-
-
 
       <!-- portfolio -->
       <!--
@@ -625,6 +669,135 @@ These are some of the projects I have worked on recently. I expect this list to 
      </div>
 
   </div> <!-- portfolio -->
+
+
+
+
+
+
+
+
+
+
+  <div id="podcasts" class="podcasts">
+    <div class="row">
+     <div class="col-md-6">
+       <h1>Podcasts</h1>
+       <div class="podcasts-description">
+         <p>
+          I regularly listen to a number of useful Software and Web Developer podcasts:
+         </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row picture-grid-small">
+
+      <!-- ted-radio-hour -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="http://www.npr.org/podcasts/510298/ted-radio-hour" target="_blank">
+         <img  alt="link image" data-src="http://media.npr.org/assets/img/2015/03/18/ted_sq-3426270a541795b78233a698dd7965d407545cf3-s400-c85.jpg">
+        </a>
+        &nbsp; &nbsp; &nbsp;Ted Radio Hour:&nbsp; A great podcast for indepth look at the human experiences.
+       </p>
+      </div>
+
+      <!-- software-engineering-daily -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://softwareengineeringdaily.com/category/podcast/" target="_blank">
+         <img  alt="link image" data-src="https://softwareengineeringdaily.com/wp-content/uploads/2015/08/sed_logo_updated.png">
+        </a>
+        &nbsp; &nbsp; &nbsp;Software Engineering Daily:&nbsp; A small podcast that covers a broad range of software related subjects.
+       </p>
+      </div>
+
+
+
+      <!-- javascript-jabber -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://devchat.tv/js-jabber" target="_blank">
+         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/js-jabber.png">
+        </a>
+        &nbsp; &nbsp; &nbsp;Javascript Jabber:&nbsp; Podcast specific to Javascript and current events.
+       </p>
+      </div>
+
+      <!-- adventures-in-angular -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://devchat.tv/adv-in-angular" target="_blank">
+         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/adventures-in-angular.png">
+        </a>
+        &nbsp; &nbsp; &nbsp;Adventures Angular:&nbsp; Podcast specific to Angular.js, some JavaScript, and current events.
+       </p>
+      </div>
+
+      <!-- react-native-radio -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://devchat.tv/react-native-radio" target="_blank">
+         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/react-native-radio.png">
+        </a>
+        &nbsp; &nbsp; &nbsp;React Native Radio:&nbsp; Podcast specific to React and React Native (for cross platform mobile).
+       </p>
+      </div>
+
+      <!-- node-up -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="hhttp://nodeup.com/" target="_blank">
+         <img  alt="link image" data-src="https://avatars2.githubusercontent.com/u/1253661?v=4&s=200">
+        </a>
+        &nbsp; &nbsp; &nbsp;Node Up:&nbsp; Shows about Node.js and it's various uses.
+       </p>
+      </div>
+
+      <!-- codepen-radio -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://blog.codepen.io/radio/" target="_blank">
+         <img  alt="link image" data-src="http://is5.mzstatic.com/image/thumb/Music71/v4/e7/e3/ba/e7e3ba5f-7c2d-db02-c9af-e622bfbfd457/source/170x170bb.jpg">
+        </a>
+        &nbsp; &nbsp; &nbsp;CodePen Radio:&nbsp; About the CodePen tool/site and interviews with key developers.
+       </p>
+      </div>
+
+      <!-- data-skeptic -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://dataskeptic.com/podcast" target="_blank">
+         <img  alt="link image" data-src="https://static.libsyn.com/p/assets/2/9/3/8/2938570bb173ccbc/DataSkeptic-Podcast-1A.jpg">
+        </a>
+        &nbsp; &nbsp; &nbsp;Data Skeptic:&nbsp; A podcast that attempts to explain statistics to everyone.
+       </p>
+      </div>
+
+      <!-- dotnet-rocks -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="https://www.dotnetrocks.com/" target="_blank">
+         <img  alt="link image" data-src="https://lh4.ggpht.com/0JbxRvBX656nsl3O8FCQZ6bnRmo89sFO48KZHB5Jne2MNQVLGgkPr5WsIoepJqpWeYPK=w300-rw">
+        </a>
+        &nbsp; &nbsp; &nbsp;.Net Rocks!:&nbsp; A podcast about .Net, C# and current events in the Microsoft dev communities.
+       </p>
+      </div>
+
+      <!-- shoptalk -->
+      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+       <p>
+        <a rel="noopener" href="http://shoptalkshow.com/" target="_blank">
+         <img  alt="link image" data-src="http://shoptalkshow.com/wp-content/themes/shoptalk2/images/shoptalk_logo.png">
+        </a>
+        &nbsp; &nbsp; &nbsp;Shop Talk:&nbsp; A podcast about Web front-end development, with lots of about Javascript frameworks.
+       </p>
+      </div>
+
+
+
+  </div> <!-- podcasts -->
 
   <div id="contact" class="contact">
     <div class="row">

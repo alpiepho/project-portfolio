@@ -1,774 +1,244 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="blue">
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <!--
-  <link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
-  -->
-  <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
-  <title>Al Piepho | Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="blue">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+    <title>Al Piepho | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Rock+Salt'>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href='style.css'>
 
+    <script>
+    window.console = window.console || function(t) {};
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+    </script>
 
-  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js'>
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css'>
-  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Nothing+You+Could+Do|Rock+Salt'>
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
-      <style>
-/*
-FROM: https://stackoverflow.com/questions/19827605/change-bootstrap-navbar-collapse-breakpoint-without-using-less
-https://coderwall.com/p/wpjw4w/change-the-bootstrap-navbar-breakpoint
+  </head>
 
-NOTE: not sure how to override these defaults from Bootstrap
-@media (max-width: 991px) {
-  .navbar-header {
-      float: none;
-  }
-  .navbar-left,.navbar-right {
-      float: none !important;
-  }
-  .navbar-toggle {
-      display: block;
-  }
-  .navbar-collapse {
-      border-top: 1px solid transparent;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-  }
-  .navbar-fixed-top {
-      top: 0;
-      border-width: 0 0 1px;
-  }
-  .navbar-collapse.collapse {
-      display: none!important;
-  }
-  .navbar-nav {
-      float: none!important;
-      margin-top: 7.5px;
-  }
-  .navbar-nav>li {
-      float: none;
-  }
-  .navbar-nav>li>a {
-      padding-top: 10px;
-      padding-bottom: 10px;
-  }
-  .collapse.in{
-      display:block !important;
-  }
-}
-*/
-}
+  <body translate="no" >
 
-/* Color Palette
-#1E49A8 -  30,  73, 168 - Denim Blue
-#56B2DD -  86, 178, 221 - Blue Jeans
-#2F79B5 -  47, 121, 181 - Steel Blue
-#465775 -  70,  87, 117 - Independence
-#062056 -  06,  20,  86 - Oxford Blue
-#BBBBBB - 187, 187, 187 - lighter gray
-*/
-body {
-  color: #BBBBBB;
-  margin: 0;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-.home, .about, .portfolio, .podcasts, .contact {
-  color: white;
-  min-height: 900px;
-}
-
-h1 {
-  font-family: 'Rock Salt', cursive;
-  margin-top: 70px;
-}
-
-.home {
-  background-color: #1E49A8;
-  width: 100%;
-}
-
-.home img {
-  border-radius: 5%;
-  margin-left: 50px;
-  margin-top: 100px;
-}
-
-.home h1 {
-  font-size: 5em;
-  margin-top: 100px;
-}
-
-.home-sub-title {
-  font-family: 'Rock Salt', cursive;
-  font-size: 1.5em;
-  margin-right: 20px;
-  margin-top: 100px;
-}
-
-.about {
-  color: white;
-  background: url("https://images.unsplash.com/photo-1437915219556-8c287594737a?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") center fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.about-description {
-  font-size: 1.5em;
-  margin-right: 50px;
-  margin-top: 100px;
-}
-
-.portfolio {
-  color: white;
-  background: url("https://images.unsplash.com/uploads/1412750321034baa5d127/d35c5980?dpr=1&auto=format&fit=crop&w=1500&h=845&q=80&cs=tinysrgb&crop=&bg=") center fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.portfolio h1 {
-  margin-left: 50px;
-}
-
-.portfolio-description {
-  font-size: 1.5em;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.picture-grid p {
-  font-size: 1em;
-  margin-left: 50px;
-  text-align: center;
-  width: 80%;
-}
-
-.picture-grid strong {
-  color: black;
-}
-
-.picture-grid img {
-  width: 70%;
-  border-radius: 5%;
-}
-
-.picture-grid-small img {
-  max-width: 100px;
-  border-radius: 5%;
-}
-
-.picture-grid a {
-  color: black;
-}
-
-.picture-grid-item {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 400px;
-  overflow: hidden;
-}
-
-.picture-grid-item-small {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: 100px;
-}
-
-.picture-grid-item-small p {
-  font-size: 1.1em;
-}
-
-
-#port-qrcode {
-  float: right;
-  margin-right: 100px;
-  width: 75px;
-}
-
-.portfolio-note {
-  font-size: 1em;
-  text-align: center;
-}
-
-.podcasts {
-  color: white;
-  background-color: #1E49A8;
-  width: 100%;
-}
-
-.podcasts h1 {
-  margin-left: 50px;
-}
-
-.podcasts-description {
-  font-size: 1.5em;
-  margin-left: 50px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.contact {
-  color: white;
-  background: url("https://images.unsplash.com/photo-1488487418851-af30939c47ce?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=") center fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: -40px;
-}
-
-.contact-description {
-  font-size: 1.5em;
-  margin-right: 50px;
-}
-
-.contact-icon {
-  color: white;
-  font-size: 2em;
-  margin-top: 30px;
-}
-
-.contact-icon a {
-  color: white;
-}
-
-.footer {
-  color: black;
-}
-
-/* for lazy load of images */
-img {
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-img[data-src] {
-  opacity: 0;
-}
-
-@media (max-width: 768px) {
-  h1,
-  .home-sub-title,
-  .about-description,
-  .contact-description ,
-  .contact-icon
-  {
-    margin-left: 20px;
-  }
-  h1 {
-    margin-top: 20px;
-  }
-
-  .home,
-  .about,
-  .portfolio,
-  .podcasts,
-  .contact {
-    padding-bottom: 120px;
-    padding-top: 120px;
-    min-height: 200px;
-  }
-
-  .picture-grid-item-small {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 100px;
-  }
-
-  .home img {
-    display: none;
-  }
-}
-    </style>
-
-  <script>
-  window.console = window.console || function(t) {};
-</script>
-
-
-
-  <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
-
-</head>
-
-<body translate="no" >
-
-   <!-- .navbar -->
-<nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-primary">
-	<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">
-	&#9776;
-	</button>
-	<div class="collapse navbar-toggleable-md" id="mainNavbarCollapse">
-		<ul class="nav navbar-nav pull-lg-right">
-			<li class="nav-item">
-				<a rel="noopener" class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
-			</li>
-			<li class="nav-item">
-				<a rel="noopener" class="nav-link" href="#about">About</a>
-			</li>
-			<li class="nav-item">
-				<a rel="noopener" class="nav-link" href="#portfolio">Web-Projects</a>
-			</li>
-      <li class="nav-item">
-				<a rel="noopener" class="nav-link" href="#podcasts">Podcasts</a>
-			</li>
-      <!--
-			<li class="nav-item dropdown">
-				<a rel="noopener" class="nav-link" id="navbarDropdown1" data-target="#" href="http://example.com" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-					<li><a rel="noopener" class="dropdown-item" href="#">Action</a></li>
-					<li><a rel="noopener" class="dropdown-item" href="#">Another action</a></li>
-					<li><a rel="noopener" class="dropdown-item" href="#">Something else here</a></li>
-				</ul>
-			</li>
-      -->
-			<li class="nav-item">
-				<a rel="noopener" class="nav-link" href="#contact">Contacts</a>
-			</li>
-		</ul>
-	</div>
-</nav>
-<!-- /.navbar -->
-
-<div class="container-fluid">
-  <div id="home" class="home">
-    <div class="row">
-      <div class="col-md-6">
-        <img class="nav-image img-rounded" alt="avatar" data-src="https://avatars1.githubusercontent.com/u/10007673?v=3&s=400">
+    <!-- .navbar -->
+    <nav class="navbar navbar-full navbar-fixed-top navbar-dark bg-primary">
+      <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">
+      &#9776;
+      </button>
+      <div class="collapse navbar-toggleable-md" id="mainNavbarCollapse">
+        <ul class="nav navbar-nav pull-lg-right">
+          <li class="nav-item">
+            <a rel="noopener" class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a rel="noopener" class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a rel="noopener" class="nav-link" href="#portfolio">Web-Projects</a>
+          </li>
+          <li class="nav-item">
+            <a rel="noopener" class="nav-link" href="#podcasts">Podcasts</a>
+          </li>
+          <li class="nav-item">
+            <a rel="noopener" class="nav-link" href="#contact">Contacts</a>
+          </li>
+        </ul>
       </div>
-      <div class="col-md-6">
-        <h1>Al Piepho</h1>
-        <div class="home-sub-title">
-        Software | Firmware
-        <br/>HTML | CSS | Javascript
-        <br/>React | Node | MongoDB
-        <br/>Ruby | Python
-        <br/>C/C++/C#
-        <br/>Selenium
-        <br/>Embedded Systems
-        <br/>Web Development
-        <br/>Northern CO
-        </div>
-       </div>
-    </div>
-  </div> <!-- home -->
+    </nav>
 
-  <div id="about" class="about">
-    <div class="row">
-     <div class="col-md-6 col-md-offset-6">
-       <h1>About Me</h1>
-       <div class="about-description">
-         <p>
-        I am a problem solver, looking for a position developing cool Software or Firmware.
-         </p>
-         <p>
-        With a very strong background in Embedded Systems, I recently expanded my skills in Web development. I am a true self-starter and just love to learn new things.
-         </p>
-         <br>
-         <p>
-           <em>"Know something of everything and everything of something."</em> - paraphrase of Blaise Pascal
-         </p>
-         <br>
-         <p>
-           <em>"code is just a spectrum...same concepts, just different syntax..."</em> - Me
-         </p>
+    <div class="container-fluid">
+      <!-- home -->
+      <div id="home" class="home">
+        <div class="row">
+          <div class="col-md-6">
+            <img class="nav-image img-rounded" alt="avatar" data-src="https://avatars1.githubusercontent.com/u/10007673?v=3&s=400">
+          </div>
+          <div class="col-md-6">
+            <h1>Al Piepho</h1>
+            <div class="home-sub-title">
+            SW | FW | Embedded
+            <br/>Javascript | HTML | CSS
+            <br/>Python | Node | Ruby
+            <br/>C/C++/C#
+            <br/>Selenium | Jenkins
+            <br/>Embedded Systems
+            <br/>Web Development
+            <br/>Northern CO
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div> <!-- about -->
 
-  <div id="portfolio" class="portfolio">
-    <div class="row">
-     <div class="col-md-6">
-      <h1>My Web Projects</h1>
-       <p class="portfolio-description">
-       These are some of the web projects I have worked on recently.
-       </p>
+      <!-- about -->
+      <div id="about" class="about">
+        <div class="row">
+        <div class="col-md-6 col-md-offset-6">
+          <h1>About Me</h1>
+          <div class="about-description">
+            <p>
+            I am a problem solver, looking for a position developing Software or Firmware that has an impact.
+            </p>
+            <p>
+            With a very strong background in Embedded Systems, I contiunue to expand my skills in Python and Web development. I am a true self-starter and just love to learn new things.
+            </p>
+            <br>
+            <p>
+              <em>"Know something of everything and everything of something."</em> - paraphrase of Blaise Pascal
+            </p>
+            <br>
+            <p>
+              <em>"code is just a spectrum...same concepts, just different syntax..."</em> - Me
+            </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <p class="portfolio-note">
-        (Click on the image to go to that site. Some of the sites are hosted on the free service of Heroku and can take 15-30 seconds to load.)
-        </p>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class="row picture-grid">
 
       <!-- portfolio -->
-      <!--
-      <div class="col-md-6 col-md-offset-3 picture-grid-item">
-      -->
-      <div class="col-md-6 picture-grid-item">
-         <img id="port-qrcode" alt="QR code" src="https://chart.googleapis.com/chart?chf=bg,s,ffffff&amp;cht=qr&amp;chs=120x120&amp;chl=https://bit.ly/al-piepho-portfolio&amp;chld=|0">
-        <p>
-<strong>Ongoing:</strong> This project started from freeCodeCamp, and was migrated to GitHub and GH Pages.
-       </p>
-       <p>
-        <a rel="noopener" href="https://bit.ly/al-piepho-portfolio" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-project-portfolio.png?raw=true">
-        </a>
-       </p>
-      </div>
+      <div id="portfolio" class="portfolio">
+        <div class="row">
+        <div class="col-md-6">
+          <h1>My Web Projects</h1>
+          <p class="portfolio-description">
+          These are some of the projects I have worked on. (Click on the image to go to that site.)
+          </p>
+          </div>
+        </div>
 
-      <!-- fcc-dv-cert -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>September 2017:</strong> Finished the Free Code Camp Data Visualization Certification!! (One more to go)
-       </p>
-       <p>
-        <a rel="noopener" href="https://www.freecodecamp.org/apiepho/data-visualization-certification" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-dv-cert.png?raw=true">
-        </a>
-       </p>
-      </div>
+        <div class="row picture-grid">
 
-      <!-- force direct -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>September 2017:</strong> A freeCodeCamp Data Visuallization project using D3.js to present a force direct graph.  (very powerful graphical effects).
-       </p>
-      <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/WZeMEE/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-forcedirect.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- portfolio -->
+          <!--
+          <div class="col-md-6 col-md-offset-3 picture-grid-item">
+          -->
 
-      <!-- heatmap -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>September 2017:</strong> A freeCodeCamp Data Visuallization project using D3.js to present a heat map graph.
-       </p>
-      <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/pWzELR/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-heatmap.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- fcc-dv-cert -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>September 2017:</strong> Finished the Free Code Camp Data Visualization Certification!! (One more to go)
+          </p>
+          <p>
+            <a rel="noopener" href="https://www.freecodecamp.org/apiepho/data-visualization-certification" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-dv-cert.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- scatter plot -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>September 2017:</strong> A freeCodeCamp Data Visuallization project using D3.js to present a scatter plot.
-       </p>
-      <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/KvLoGN/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-scatter.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- rougelike -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>August 2017:</strong> A freeCodeCamp Data Visuallization project to implement a Rouge-like game.  Written in React.js.  Seemed like a simple project, but was very involved.
+          </p>
+          <p>
+            <a rel="noopener" href="https://codepen.io/sd3x/full/ayQMLb/" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-roguelike.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- rougelike -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>August 2017:</strong> A freeCodeCamp Data Visuallization project to implement a Rouge-like game.  Written in React.js.  Seemed like a simple project, but was very involved.
-       </p>
-      <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/ayQMLb/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-roguelike.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- purecss -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>June 2017:</strong> Started Daily CSS Challenge to create complex graphics with just HTML and CSS.  Have completed all 50.  So amazing what is possible with just CSS!
+          </p>
+          <p>
+            <a rel="noopener" href="https://codepen.io/collection/DYpQdK/" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-purecss.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- game of life -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>August 2017:</strong> A freeCodeCamp Data Visuallization project to implement Game of Life simulation.  Written in React.js.
-       </p>
-      <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/QMxmOj/" target="_blank">
-         <img style="border-radius: 1em; width: 55%;" alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gameoflife.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- fcc-fe-cert -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>May 2017:</strong> Finished the Free Code Camp Front Development Certification!!  Only complaint is the number of cups of coffee that went cold because I was so focused :)
+          </p>
+          <p>
+            <a rel="noopener" href="https://www.freecodecamp.com/apiepho/front-end-certification" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-fe-cert.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- voting app -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>August 2017:</strong> A freeCodeCamp Back-End project to build a full-stack web application to allow general voting.  Written in Node/Express and vanilla JS on frontend, with Bootstrap for style.
-       </p>
-      <p>
-        <a rel="noopener" href="https://alp-fcc-be-voting-app.herokuapp.com/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-voting-app.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- simon -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>May 2017:</strong> This is a game modeled after the original Simon game.  See the link at the bottom for the original game instructions.
+          </p>
+          <p>
+            <a rel="noopener" href="https://codepen.io/sd3x/full/mmobeZ/" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-simon.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- terms4 -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>July 2017:</strong> Terms4: Re-wrote the front-end of Terms3 in React.js.  Used from create-react-app, material-ui.js, and ported Terms3 server.  Deployed on Heroku AND mock-data version on gh-pages.
-       </p>
-      <p>
-        <a rel="noopener" href="https://alpiepho.github.io/terms4/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-terms4.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- tic-tac-toe -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>May 2017:</strong> A freeCodeCamp project, Tic Tac Toe game with many options. 1 or 2 player. (Port to <a rel="noopener" href="https://github.com/alpiepho/project-tic-tac-toe" target="_blank">standalone</a> version with Selenium regression test.)
+          </p>
+          <p>
+            <a rel="noopener" href="https://codepen.io/sd3x/full/RVqxZz/" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-tic-tac-toe.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- gcstats -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>July 2017:</strong> GC Stats, a redesigned gc-app tool to gather baseball stats using Node.js and Selenium.  Expanded tool to gather more stats and also created Web application to view the data easily.
-       </p>
-       <p>
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gcstats.png?raw=true">
-       </p>
-      </div>
+          <!-- js calculator -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>May 2017:</strong> With any luck this is not another boring old JavaScript calculator.  This one has a cool font (if I say so myself) and lets you pick the animation for the button clicks.  Enjoy!
+          </p>
+          <p>
+            <a rel="noopener" href="https://codepen.io/sd3x/full/qmMGqZ/" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-js-calculator.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- purecss -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>June 2017:</strong> Started Daily CSS Challenge to create complex graphics with just HTML and CSS.  Have completed 22 of 50.  So amazing what is possible with just CSS!
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/collection/DYpQdK/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-purecss.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- rpn-hex-calc -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>Apr 2017:</strong> A simple reverse-polish-notation hex calculator <span style="color: blue;">Chrome Extension</span>. Allows quick access to do simple hex operations and see the decimal value. Written in HTML, JavaScript, and jQuery. Also includes a Ruby/Watir Selenium test framework to verify all operations in a browser.
+          </p>
+          <p>
+            <a rel="noopener" href="https://github.com/apiepho/rpn_hex_calc" target="_blank">
+            <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-rpn-hex-calc.png?raw=true">
+            </a>
+          </p>
+          </div>
 
-      <!-- fcc-fe-cert -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> Finished the Free Code Camp Front Development Certification!!  Only complaint is the number of cups of coffee that went cold because I was so focused :)
-       </p>
-       <p>
-        <a rel="noopener" href="https://www.freecodecamp.com/apiepho/front-end-certification" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-fe-cert.png?raw=true">
-        </a>
-       </p>
-      </div>
+        <!-- sample-app -->
+        <div class="col-md-6 picture-grid-item">
+          <p>
+    <strong>Jan 2017:</strong> This is my implementation of the full sample_app from the 'Ruby on Rails Tutorial' by Michael Hartl. This is a well known online book for learning Ruby on Rails. (hosted on Heroku and can take 15-30 seconds to load)
+          </p>
+          <p>
+            <a rel="noopener" href="http://bit.ly/thatname-group-portfolio-sample-app" target="_blank">
+              <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-sample-app.png?raw=true">
+            </a>
+          </p>
+        </div>
 
-      <!-- simon -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> This is a game modeled after the original Simon game.  See the link at the bottom for the original game instructions.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/mmobeZ/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-simon.png?raw=true">
-        </a>
-       </p>
-      </div>
+          <!-- gc-app -->
+          <div class="col-md-6 picture-grid-item">
+            <p>
+    <strong>Jan 2017:</strong> A Ruby based application to automate gathering baseball game data from an online service for youth/prep baseball teams. This tool uses the Watir Ruby Gem, an implementation of the Selenium API for automated web site testing. This is used to navigate to all the pages and scrap data from each page.
+          </p>
+          <p>
+            <a rel="noopener" href="https://github.com/apiepho/gc_app" target="_blank">
+              <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gc-app.png?raw=true">
+            </a>
+          </p>
+        </div>
 
-      <!-- ttt-watir -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> Standalone version of Tic-Tac-Toe app and Ruby/Selenium regression test.
-       </p>
-       <p>
-        <a rel="noopener" href="https://github.com/alpiepho/project-tic-tac-toe" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-ttt-watir.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- tic-tac-toe -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> A freeCodeCamp project, Tic Tac Toe game with many options. 1 or 2 player.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/RVqxZz/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-tic-tac-toe.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- pomodoro -->
-      <div class="col-md-6 picture-grid-item" style="padding-bottom: 50px;">
-        <p>
-<strong>May 2017:</strong> This simple Pomodoro clock changes the background when stopped, in work count down, and break countdown, so you can quickly recognize which stage of the work cycle you are in.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/WjaVYE/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-pmodoro.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- js calculator -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> With any luck this is not another boring old JavaScript calculator.  This one has a cool font (if I say so myself) and lets you pick the animation for the button clicks.  Enjoy!
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/qmMGqZ/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-js-calculator.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- twitch tv -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> A FreeCodeCamp project to list and filter Twitch TV streams.  Uses HTML, CSS, JavaScript and jQuery.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/OmoXzJ/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-twitch.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- wikipedia -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> An app to consolidate Wikipedia searches. Written in HTML, CSS, and jQuery.  Uses the Wikpedia API.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/YVaKem/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-wikipedia.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- AWS scratch from serverless.com tutorial -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> Implemented tutorial for React.js app on AWS server from serverless.com.  This was the most complete React.js tutorial I've seen, with good taste of AWS management.
-       </p>
-       <p>
-        <a rel="noopener" href="https://d1ua3rgv2nx5rn.cloudfront.net/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-aws-scratch.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- old portfolio -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> An older portfolio created with angular-cli (Angular2) and deployed on Heroku. This site was cloned from a template site I built so I could quickly generate new Angular2 sites and easily deploy to Heroku.
-       </p>
-       <p>
-        <a rel="noopener" href="https://intense-beach-53838.herokuapp.com/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-old-portfolio.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- local weather -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> Another freeCodeCamp project to determine the current weather.  Written in HTML, CSS, and jQuery.  It uses HTML5 for geolocation and Dark Sky API for weather data.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/WjMQzL/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-weather.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- quote -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> The second project for freeCodeCamp, Basic Front End Development, A random quote generator, written in HTML, CSS, and jQuery.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/rmpoxW/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-quote.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- tribute -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>May 2017:</strong> The first project for freeCodeCamp, Basic Front End Development, is a simple HTML with Bootstrap CSS to create a tribute. I chose to build a tribute to an old science fiction book I read...and with all the talk of machine-learning and A.I., this book rings more and true.
-       </p>
-       <p>
-        <a rel="noopener" href="https://codepen.io/sd3x/full/Njvvrj/" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-tribute.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- rpn-hex-calc -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>Apr 2017:</strong> A simple reverse-polish-notation hex calculator Chrome Extension. Allows quick access to do simple hex operations and see the decimal value. Written in HTML, JavaScript, and jQuery. Also includes a Ruby/Watir Selenium test framework to verify all operations in a browser.
-       </p>
-       <p>
-        <a rel="noopener" href="https://github.com/apiepho/rpn_hex_calc" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-rpn-hex-calc.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- terms3 -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>Mar 2017:</strong> This is the 3rd iteration of an application concept to keep a list of technical terms along with description, notes, and related links. This is loosely based on the Angular2 'Heroes' tutorial. It uses a nAngular2 front end, Node and Express for a simple server, and MongoDB on the backend for storing list. Also wrote tools to save and reset/populate the DB.
-       </p>
-      <p>
-        <a rel="noopener" href="http://bit.ly/thatname-group-portfolio-terms3" target="_blank">
-         <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-terms3.png?raw=true">
-        </a>
-       </p>
-      </div>
-
-      <!-- player-template -->
-    <div class="col-md-6 picture-grid-item">
-       <p>
-<strong>Feb 2017:</strong> This is Ruby on Rails application that mirrors an existing Wordpress site used to promote a high school baseball player to prospective college coaches. This site was designed to be a template for other players. The player data is read from a configuration file on the site and populated to the Rails files.
-      </p>
-      <p>
-         <a rel="noopener" href="http://bit.ly/thatname-group-portfolio-player-template" target="_blank">
-          <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-player-template.png?raw=true">
-         </a>
-      </p>
-     </div>
-
-     <!-- sample-app -->
-     <div class="col-md-6 picture-grid-item">
-       <p>
-<strong>Jan 2017:</strong> This is my implementation of the full sample_app from the 'Ruby on Rails Tutorial' by Michael Hartl. This is a wellknown online book for learning Ruby on Rails. The book is 700 pages long and works through designing a Rails application that is a mini version of Twitter, complete with multiple views and database store.
-      </p>
-      <p>
-         <a rel="noopener" href="http://bit.ly/thatname-group-portfolio-sample-app" target="_blank">
-          <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-sample-app.png?raw=true">
-         </a>
-      </p>
-     </div>
-
-      <!-- gc-app -->
-      <div class="col-md-6 picture-grid-item">
-        <p>
-<strong>Jan 2017:</strong> A Ruby based application to automate gathering baseball game data from an online service for youth/prep baseball teams. This tool uses the Watir Ruby Gem, an implementation of the Selenium API for automated web site testing. This is used to navigate to all the pages and scrap data from each page.
-       </p>
-       <p>
-         <a rel="noopener" href="https://github.com/apiepho/gc_app" target="_blank">
-           <img alt="link image" data-src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gc-app.png?raw=true">
-         </a>
-       </p>
-     </div>
-
-  </div> <!-- portfolio -->
+      </div> <!-- portfolio -->
 
 
 
@@ -779,208 +249,177 @@ img[data-src] {
 
 
 
-  <div id="podcasts" class="podcasts">
-    <div class="row">
-     <div class="col-md-6">
-       <h1>Podcasts I Follow</h1>
-       <div class="podcasts-description">
-         <p>
-          I regularly listen to a number of useful Software and Web Developer podcasts:
-         </p>
+      <!-- podcasts -->
+      <div id="podcasts" class="podcasts">
+        <div class="row">
+        <div class="col-md-6">
+          <h1>Podcasts To Follow</h1>
+          <div class="podcasts-description">
+            <p>
+              I regularly listen to a number of useful Software and Web Developer podcasts:
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row picture-grid-small">
+
+          <!-- podcasts to add -->
+          <!-- https://www.akimbo.me/ -->
+          <!-- https://www.redhat.com/en/command-line-heroes -->
+          <!-- https://www.intelligencesquaredus.org/podcasts?gclid=Cj0KCQiAhKviBRCNARIsAAGZ7CeomoQ8Vmn5exl03jzlhBEMGMy9TRPToWF5PdD8tf-8sVIGFDXY1HMaAvpNEALw_wcB -->
+          <!-- https://pythonbytes.fm/ -->
+          <!-- https://talkpython.fm/ -->
+          <!-- https://changelog.com/podcast -->
+          <!-- https://www.indiehackers.com/podcast -->
+          <!-- https://player.fm/series/the-official-vue-news -->
+
+          <!-- codepen-radio -->
+          <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="https://blog.codepen.io/radio/" target="_blank">
+              <img  alt="link image" data-src="http://is5.mzstatic.com/image/thumb/Music71/v4/e7/e3/ba/e7e3ba5f-7c2d-db02-c9af-e622bfbfd457/source/170x170bb.jpg">
+              </a>
+              &nbsp; &nbsp; &nbsp;CodePen Radio:&nbsp; About the CodePen tool/site and interviews with key developers.
+            </p>
+          </div>
+
+          <!-- dotnet-rocks -->
+          <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="https://www.dotnetrocks.com/" target="_blank">
+              <img  alt="link image" data-src="https://lh4.ggpht.com/0JbxRvBX656nsl3O8FCQZ6bnRmo89sFO48KZHB5Jne2MNQVLGgkPr5WsIoepJqpWeYPK=w300-rw">
+              </a>
+              &nbsp; &nbsp; &nbsp;.Net Rocks!:&nbsp; A podcast about .Net, C# and current events in the Microsoft dev communities.
+            </p>
+          </div>
+
+        <!-- software-engineering-daily -->
+        <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="https://softwareengineeringdaily.com/category/podcast/" target="_blank">
+              <img  alt="link image" data-src="https://softwareengineeringdaily.com/wp-content/uploads/2015/08/sed_logo_updated.png">
+              </a>
+              &nbsp; &nbsp; &nbsp;Software Engineering Daily:&nbsp; A small podcast that covers a broad range of software related subjects.
+            </p>
+          </div>
+                       
+          <!-- javascript-jabber -->
+          <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="https://devchat.tv/js-jabber" target="_blank">
+              <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/js-jabber.png">
+              </a>
+              &nbsp; &nbsp; &nbsp;Javascript Jabber:&nbsp; Podcast specific to Javascript and current events.
+            </p>
+          </div>
+    
+          <!-- adventures-in-angular -->
+          <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="https://devchat.tv/adv-in-angular" target="_blank">
+              <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/adventures-in-angular.png">
+              </a>
+              &nbsp; &nbsp; &nbsp;Adventures Angular:&nbsp; Podcast specific to Angular.js, some JavaScript, and current events.
+            </p>
+          </div>
+    
+
+          <!-- shoptalk -->
+          <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
+            <p>
+              <a rel="noopener" href="http://shoptalkshow.com/" target="_blank">
+              <img  alt="link image" data-src="http://shoptalkshow.com/wp-content/themes/shoptalk2/images/shoptalk_logo.png">
+              </a>
+              &nbsp; &nbsp; &nbsp;Shop Talk:&nbsp; A podcast about Web front-end development, with lots of about Javascript frameworks.
+            </p>
+          </div>
+
+
+
+      </div> <!-- END podcasts -->
+
+       <!-- contact -->
+      <div id="contact" class="contact">
+        <div class="row">
+        <div class="col-md-6 col-md-offset-6">
+            <h1>My Contact Info</h1>
+            <div class="contact-description">
+    Please contact me at one of my accounts.  I am usually very responsive...if my coffee isn't going cold because I am totally sucked into coding :)
+          </div>
+          </div>
+
+          <div class="row contact-icon">
+            <div class="col-md-4 col-md-offset-2">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp;&nbsp;<a rel="noopener" href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Linkedin</a>
+            </div>
+          </div>
+          <div class="row contact-icon">
+            <div class="col-md-4 col-md-offset-2">
+            <i class="fa fa-fire" aria-hidden="true"></i>&nbsp;&nbsp;<a rel="noopener" rel="noopener" href="https://www.freecodecamp.com/apiepho" target="_blank">FreeCodeCamp</a>
+            </div>
+          </div>
+          <div class="row contact-icon">
+            <div class="col-md-4 col-md-offset-2">
+            <i class="fa fa-codepen" aria-hidden="true"></i>&nbsp;&nbsp;<a rel="noopener" rel="noopener" href="https://codepen.io/sd3x/" target="_blank">CodePen</a>
+            </div>
+          </div>
+          <div class="row contact-icon">
+            <div class="col-md-4 col-md-offset-2">
+              <i class="fa fa-github" aria-hidden="true"></i>&nbsp;&nbsp;<a rel="noopener" rel="noopener" href="https://github.com/alpiepho" target="_blank">Github</a>
+            </div>
+          </div>
+          <div class="row contact-icon">
+            <div class="col-md-4 col-md-offset-2">
+              <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;<a download href="ResumeForAlPiepho_public.pdf">Resume</a>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
-    <div class="row picture-grid-small">
-
-      <!-- ted-radio-hour -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="http://www.npr.org/podcasts/510298/ted-radio-hour" target="_blank">
-         <img  alt="link image" data-src="http://media.npr.org/assets/img/2015/03/18/ted_sq-3426270a541795b78233a698dd7965d407545cf3-s400-c85.jpg">
-        </a>
-        &nbsp; &nbsp; &nbsp;Ted Radio Hour:&nbsp; A great podcast for indepth look at the human experiences.
-       </p>
-      </div>
-
-      <!-- software-engineering-daily -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://softwareengineeringdaily.com/category/podcast/" target="_blank">
-         <img  alt="link image" data-src="https://softwareengineeringdaily.com/wp-content/uploads/2015/08/sed_logo_updated.png">
-        </a>
-        &nbsp; &nbsp; &nbsp;Software Engineering Daily:&nbsp; A small podcast that covers a broad range of software related subjects.
-       </p>
-      </div>
-
-
-
-      <!-- javascript-jabber -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://devchat.tv/js-jabber" target="_blank">
-         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/js-jabber.png">
-        </a>
-        &nbsp; &nbsp; &nbsp;Javascript Jabber:&nbsp; Podcast specific to Javascript and current events.
-       </p>
-      </div>
-
-      <!-- adventures-in-angular -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://devchat.tv/adv-in-angular" target="_blank">
-         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/adventures-in-angular.png">
-        </a>
-        &nbsp; &nbsp; &nbsp;Adventures Angular:&nbsp; Podcast specific to Angular.js, some JavaScript, and current events.
-       </p>
-      </div>
-
-      <!-- react-native-radio -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://devchat.tv/react-native-radio" target="_blank">
-         <img  alt="link image" data-src="https://devchat.tv/wp-content/uploads/2016/04/react-native-radio.png">
-        </a>
-        &nbsp; &nbsp; &nbsp;React Native Radio:&nbsp; Podcast specific to React and React Native (for cross platform mobile).
-       </p>
-      </div>
-
-      <!-- node-up -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="hhttp://nodeup.com/" target="_blank">
-         <img  alt="link image" data-src="https://avatars2.githubusercontent.com/u/1253661?v=4&s=200">
-        </a>
-        &nbsp; &nbsp; &nbsp;Node Up:&nbsp; Shows about Node.js and it's various uses.
-       </p>
-      </div>
-
-      <!-- codepen-radio -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://blog.codepen.io/radio/" target="_blank">
-         <img  alt="link image" data-src="http://is5.mzstatic.com/image/thumb/Music71/v4/e7/e3/ba/e7e3ba5f-7c2d-db02-c9af-e622bfbfd457/source/170x170bb.jpg">
-        </a>
-        &nbsp; &nbsp; &nbsp;CodePen Radio:&nbsp; About the CodePen tool/site and interviews with key developers.
-       </p>
-      </div>
-
-      <!-- data-skeptic -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://dataskeptic.com/podcast" target="_blank">
-         <img  alt="link image" data-src="https://static.libsyn.com/p/assets/2/9/3/8/2938570bb173ccbc/DataSkeptic-Podcast-1A.jpg">
-        </a>
-        &nbsp; &nbsp; &nbsp;Data Skeptic:&nbsp; A podcast that attempts to explain statistics to everyone.
-       </p>
-      </div>
-
-      <!-- dotnet-rocks -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="https://www.dotnetrocks.com/" target="_blank">
-         <img  alt="link image" data-src="https://lh4.ggpht.com/0JbxRvBX656nsl3O8FCQZ6bnRmo89sFO48KZHB5Jne2MNQVLGgkPr5WsIoepJqpWeYPK=w300-rw">
-        </a>
-        &nbsp; &nbsp; &nbsp;.Net Rocks!:&nbsp; A podcast about .Net, C# and current events in the Microsoft dev communities.
-       </p>
-      </div>
-
-      <!-- shoptalk -->
-      <div class="col-md-offset-2 col-md-10 picture-grid-item-small">
-       <p>
-        <a rel="noopener" href="http://shoptalkshow.com/" target="_blank">
-         <img  alt="link image" data-src="http://shoptalkshow.com/wp-content/themes/shoptalk2/images/shoptalk_logo.png">
-        </a>
-        &nbsp; &nbsp; &nbsp;Shop Talk:&nbsp; A podcast about Web front-end development, with lots of about Javascript frameworks.
-       </p>
-      </div>
-
-
-
-  </div> <!-- podcasts -->
-
-  <div id="contact" class="contact">
-    <div class="row">
-     <div class="col-md-6 col-md-offset-6">
-        <h1>My Contact Info</h1>
-        <div class="contact-description">
-Please contact me at one of my accounts.  I am very responsive...if not totally sucked into coding :)
-       </div>
-      </div>
-
-      <div class="row contact-icon">
-        <div class="col-md-4 col-md-offset-2">
-         <i class="fa fa-linkedin" aria-hidden="true"></i>  <a rel="noopener" href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Linkedin</a>
+      <!-- footer --> 
+      <footer class="footer">
+        <hr>
+        <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+        <p class="text-right">
+        Page built by&nbsp;
+        <a rel="noopener" href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Al Piepho</a> <em>&nbsp;&nbsp;(SW | FW | Embedded | Web)&nbsp;&nbsp;2019</em>
+        </p>
+          </div>
         </div>
-       </div>
-       <div class="row contact-icon">
-        <div class="col-md-4 col-md-offset-2">
-         <i class="fa fa-fire" aria-hidden="true"></i>  <a rel="noopener" rel="noopener" href="https://www.freecodecamp.com/apiepho" target="_blank">FreeCodeCamp</a>
-        </div>
-       </div>
-      <div class="row contact-icon">
-        <div class="col-md-4 col-md-offset-2">
-         <i class="fa fa-codepen" aria-hidden="true"></i>  <a rel="noopener" rel="noopener" href="https://codepen.io/sd3x/" target="_blank">CodePen</a>
-        </div>
-       </div>
-      <div class="row contact-icon">
-        <div class="col-md-4 col-md-offset-2">
-          <i class="fa fa-github" aria-hidden="true"></i>  <a rel="noopener" rel="noopener" href="https://github.com/alpiepho" target="_blank">Github</a>
-        </div>
-       </div>
-       <!-- <div class="row contact-icon">
-         <div class="col-md-4 col-md-offset-2">
-           <i class="fa fa-file-pdf-o" aria-hidden="true"></i>  <a download href="ResumeForAlPiepho_fw.pdf">Resume</a>
-         </div>
-        </div> -->
+      </footer>
 
-     </div>
-  </div> <!-- contact -->
+    </div> <!-- END container-fluid -->
 
-  <footer class="footer">
-    <hr>
-    <div class="row">
-     <div class="col-md-6 col-md-offset-4">
-    <p class="text-right">
-    Page built by&nbsp;
-    <a rel="noopener" href="https://www.linkedin.com/in/al-piepho-fw-sw-engineer/" target="_blank">Al Piepho</a> <em>&nbsp;&nbsp;(SW | FW | Embedded | Web)&nbsp;&nbsp;2017</em>
-    </p>
-      </div>
-    </div>
-   </footer>
-
-</div> <!-- container-fluid -->
-<!-- fixes error in chrome, but I still need to understand this -->
-<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- fixes error in chrome, but I still need to understand this -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js'></script>
 
-<script>
-// HACK: for some reason, Bootstrap navigation (in small mode) will not auto collapse
-//       menu when nav-link is clicked.  Do it manually here.
-$(".nav-link").click(function (e) {
-  $(".navbar-toggleable-md").toggleClass("show");
-  $(".navbar-toggleable-md").toggleClass("in");
-  // return true to pass the event on to next handler
-  return true;
-});
-</script>
+    <script>
+    // HACK: for some reason, Bootstrap navigation (in small mode) will not auto collapse
+    //       menu when nav-link is clicked.  Do it manually here.
+    $(".nav-link").click(function (e) {
+      $(".navbar-toggleable-md").toggleClass("show");
+      $(".navbar-toggleable-md").toggleClass("in");
+      // return true to pass the event on to next handler
+      return true;
+    });
 
-<script>
-/* lazy load images */
-[].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
-  img.setAttribute('src', img.getAttribute('data-src'));
-  img.onload = function() {
-    img.removeAttribute('data-src');
-  };
-});
-</script>
+    /* lazy load images */
+    [].forEach.call(document.querySelectorAll('img[data-src]'),    function(img) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        img.removeAttribute('data-src');
+      };
+    });
+    </script>
 
-
-
-</body>
+  </body>
 </html>

@@ -39,7 +39,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-dv-cert.png?raw=true"
+                  src="images/screenshot-fcc-dv-cert.png?raw=true"
                 />
               </a>
             </p>
@@ -60,7 +60,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-roguelike.png?raw=true"
+                  src="images/screenshot-roguelike.png?raw=true"
                 />
               </a>
             </p>
@@ -81,7 +81,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-purecss.png?raw=true"
+                  src="images/screenshot-purecss.png?raw=true"
                 />
               </a>
             </p>
@@ -102,7 +102,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-fcc-fe-cert.png?raw=true"
+                  src="images/screenshot-fcc-fe-cert.png?raw=true"
                 />
               </a>
             </p>
@@ -122,7 +122,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-simon.png?raw=true"
+                  src="images/screenshot-simon.png?raw=true"
                 />
               </a>
             </p>
@@ -150,7 +150,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-tic-tac-toe.png?raw=true"
+                  src="images/screenshot-tic-tac-toe.png?raw=true"
                 />
               </a>
             </p>
@@ -171,7 +171,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-js-calculator.png?raw=true"
+                  src="images/screenshot-js-calculator.png?raw=true"
                 />
               </a>
             </p>
@@ -195,7 +195,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-rpn-hex-calc.png?raw=true"
+                  src="images/screenshot-rpn-hex-calc.png?raw=true"
                 />
               </a>
             </p>
@@ -217,7 +217,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-sample-app.png?raw=true"
+                  src="images/screenshot-sample-app.png?raw=true"
                 />
               </a>
             </p>
@@ -240,7 +240,7 @@ class Projects extends Component {
               >
                 <img
                   alt="thumbnail"
-                  src="https://github.com/alpiepho/project-portfolio/blob/master/images/screenshot-gc-app.png?raw=true"
+                  src="images/screenshot-gc-app.png?raw=true"
                 />
               </a>
             </p>

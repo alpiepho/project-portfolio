@@ -286,17 +286,39 @@ img[data-src] {
   .podcasts,
   .contacts {
     padding-bottom: 120px;
-    padding-top: 120px;
+    padding-top: 0px;
     min-height: 200px;
   }
 
+  .contacts .col {
+    margin-left: 40px;
+  }
+
+  .picture-grid-item {
+    height: 250px;
+  }
+
   .picture-grid-item-small {
-    margin-top: 100px;
-    margin-bottom: 100px;
-    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .picture-grid-item-small a {
+    margin-top: 10px;
+    float: left;
+  }
+  .picture-grid-item-small span {
+    float: left;
+    margin-bottom: 30px;
   }
 
   .home img {
     display: none;
+  }
+
+  .footer .text-right {
+    text-align: center;
   }
 }

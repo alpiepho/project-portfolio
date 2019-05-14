@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import "./PodcastCard.css";
 
 class PodcastCard extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (
@@ -20,7 +20,10 @@ class PodcastCard extends Component {
               src={this.props.image}
             />
           </a>
-          &nbsp; &nbsp; &nbsp;{this.props.title}:&nbsp;{this.props.text}</p>
+          <span>
+            &nbsp; &nbsp; &nbsp;{this.props.title}:&nbsp;{this.props.text}
+          </span>
+        </p>
       </div>
     );
   }

@@ -3,10 +3,9 @@ import "./EmbeddedProjects.css";
 import ProjectCard from "./ProjectCard.js";
 
 class EmbeddedProjects extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+  // constructor(props) {
+  //   super(props);
+  // }
 
   render() {
     return (

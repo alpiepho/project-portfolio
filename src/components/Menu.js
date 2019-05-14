@@ -47,9 +47,18 @@ class Menu extends Component {
               <a
                 rel="noopener noreferrer"
                 className="nav-link"
-                href="#portfolio"
+                href="#embedded-projects"
               >
-                Web-Projects
+                Emdedded
+              </a>
+            </li>
+            <li className="nav-item">
+              <a
+                rel="noopener noreferrer"
+                className="nav-link"
+                href="#web-projects"
+              >
+                Web
               </a>
             </li>
             <li className="nav-item">

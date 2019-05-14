@@ -102,13 +102,23 @@ h1 {
   margin-top: 100px;
 }
 
-.portfolio {
+.web-portfolio {
   color: white;
   background: url("https://images.unsplash.com/uploads/1412750321034baa5d127/d35c5980?dpr=1&auto=format&fit=crop&w=1500&h=845&q=80&cs=tinysrgb&crop=&bg=")
     center fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.embedded-portfolio {
+  color: white;
+  background: url("https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80")
+    center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 
 .portfolio h1 {
   margin-left: 50px;

@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/project-portfolio-develop/static/css/main.f1222115.chunk.css",
-    "main.js": "/project-portfolio-develop/static/js/main.2ea6fd56.chunk.js",
-    "main.js.map": "/project-portfolio-develop/static/js/main.2ea6fd56.chunk.js.map",
-    "runtime~main.js": "/project-portfolio-develop/static/js/runtime~main.a008486d.js",
-    "runtime~main.js.map": "/project-portfolio-develop/static/js/runtime~main.a008486d.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/project-portfolio-develop/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.98917bee.chunk.js": "/project-portfolio-develop/static/js/2.98917bee.chunk.js",
-    "static/js/2.98917bee.chunk.js.map": "/project-portfolio-develop/static/js/2.98917bee.chunk.js.map",
-    "index.html": "/project-portfolio-develop/index.html",
-    "precache-manifest.e1c386885018bb1992f2c767f7efe236.js": "/project-portfolio-develop/precache-manifest.e1c386885018bb1992f2c767f7efe236.js",
-    "service-worker.js": "/project-portfolio-develop/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/project-portfolio-develop/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.f1222115.chunk.css.map": "/project-portfolio-develop/static/css/main.f1222115.chunk.css.map"
+    "main.css": "/project-portfolio/static/css/main.f1222115.chunk.css",
+    "main.js": "/project-portfolio/static/js/main.25e8e7aa.chunk.js",
+    "main.js.map": "/project-portfolio/static/js/main.25e8e7aa.chunk.js.map",
+    "runtime~main.js": "/project-portfolio/static/js/runtime~main.cf7ddae3.js",
+    "runtime~main.js.map": "/project-portfolio/static/js/runtime~main.cf7ddae3.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/project-portfolio/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.98917bee.chunk.js": "/project-portfolio/static/js/2.98917bee.chunk.js",
+    "static/js/2.98917bee.chunk.js.map": "/project-portfolio/static/js/2.98917bee.chunk.js.map",
+    "index.html": "/project-portfolio/index.html",
+    "precache-manifest.89f33dc7ab97b94597bb491838d919fd.js": "/project-portfolio/precache-manifest.89f33dc7ab97b94597bb491838d919fd.js",
+    "service-worker.js": "/project-portfolio/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/project-portfolio/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.f1222115.chunk.css.map": "/project-portfolio/static/css/main.f1222115.chunk.css.map"
   }
 }

@@ -9,27 +9,27 @@
       "type": "image/x-icon"
     },
     {
-      "src": "images/balloon_128x128.png",
+      "src": "images/balloon_128x128.webp",
         "sizes": "128x128",
         "type": "image/png"
     }, {
-      "src": "images/balloon_144x144.png",
+      "src": "images/balloon_144x144.webp",
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "images/balloon_152x152.png",
+      "src": "images/balloon_152x152.webp",
       "sizes": "152x152",
       "type": "image/png"
     }, {
-      "src": "images/balloon_192x192.png",
+      "src": "images/balloon_192x192.webp",
       "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "images/balloon_256x256.png",
+      "src": "images/balloon_256x256.webp",
       "sizes": "256x256",
       "type": "image/png"
     }, {
-      "src": "images/balloon_512x512.png",
+      "src": "images/balloon_512x512.webp",
       "sizes": "512x512",
       "type": "image/png"
     }],

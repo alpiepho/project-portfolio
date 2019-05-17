@@ -20,47 +20,47 @@ class App extends Component {
       {
         text: "RPN Hex Calculator Chrome Extension (Published to Chrome Store)",
         href: "https://chrome.google.com/webstore/detail/rpn-hex-calculator/koffmhlebmnnlgdlgfkpiglpfgjlkcmc",
-        image: "images/screenshot-rpn-hex-chrome.png"
+        image: "images/screenshot-rpn-hex-chrome.webp"
       },
       {
         text: "RPN Hex Calculator VS Code Extension (Published to Microsoft Marketplace)",
         href: "https://marketplace.visualstudio.com/items?itemName=thatnamegroup.rpn-hex-calc",
-        image: "images/screenshot-rpn-hex-vscode.png"
+        image: "images/screenshot-rpn-hex-vscode.webp"
       },
       {
         text: "Started Daily CSS Challenge to create complex graphics with just HTML and CSS. Have completed all 50. So amazing what is possible with just CSS!",
         href: "https://codepen.io/collection/DYpQdK/",
-        image: "images/screenshot-purecss.png"
+        image: "images/screenshot-purecss.webp"
       },
       {
         text: "With any luck this is not another boring old JavaScript calculator. This one has a cool font (if I say so myself) and lets you pick the animation for the button clicks. Enjoy!",
         href: "https://codepen.io/sd3x/full/qmMGqZ/",
-        image: "images/screenshot-js-calculator.png"
+        image: "images/screenshot-js-calculator.webp"
       },
       {
         text: "Finished the Free Code Camp Data Visualization Certification (before the refactor of the site)",
         href: "", // link is bad "https://www.freecodecamp.org/apiepho/data-visualization-certification"
-        image: "images/screenshot-fcc-dv-cert.png"
+        image: "images/screenshot-fcc-dv-cert.webp"
       },
       // {
       //   text: "A freeCodeCamp Data Visuallization project to implement a Rouge-like game. Written in React.js. Seemed like a simple project, but was very involved.",
       //   href: "https://codepen.io/sd3x/full/ayQMLb/",
-      //   image: "images/screenshot-roguelike.png"
+      //   image: "images/screenshot-roguelike.webp"
       // },
       {
         text: "Finished the Free Code Camp Front Development Certification!! Only complaint is the number of cups of coffee that went cold because I was so focused :)",
         href: "https://www.freecodecamp.com/apiepho/front-end-certification",
-        image: "images/screenshot-fcc-fe-cert.png"
+        image: "images/screenshot-fcc-fe-cert.webp"
       },
       {
         text: "This is a game modeled after the original Simon game. See the link at the bottom for the original game instructions.",
         href: "https://codepen.io/sd3x/full/mmobeZ/",
-        image: "images/screenshot-simon.png"
+        image: "images/screenshot-simon.webp"
       },
       {
         text: "A freeCodeCamp project, Tic Tac Toe game with many options. 1 or 2player.",
         href: "https://github.com/alpiepho/project-tic-tac-toe",
-        image: "images/screenshot-tic-tac-toe.png"
+        image: "images/screenshot-tic-tac-toe.webp"
       }
     ];
   
@@ -68,22 +68,22 @@ class App extends Component {
       {
         text: "Design, implement and debug very time and size limited firmware for several SerDes products used in high data rate serial computer interfaces",
         href: "",
-        image: "images/firmware-broadcom-sas-sata-controller.jpg"
+        image: "images/firmware-broadcom-sas-sata-controller.webp"
       },
       {
         text: "Developed embedded software for internet based digital security cameras including low level components.",
         href: "",
-        image: "images/firmware-pelco-sarix_1.jpg"
+        image: "images/firmware-pelco-sarix_1.webp"
       },
       {
         text: "Developed FW for several HP digital cameras. ",
         href: "",
-        image: "images/firmware-hp-digital-camera.jpg"
+        image: "images/firmware-hp-digital-camera.webp"
       },
       {
         text: "Architect for innovative entertainment center, a home based music center pre-dated the iPod.",
         href: "",
-        image: "images/firmware-hp-digital-entertainment.jpg"
+        image: "images/firmware-hp-digital-entertainment.webp"
       },
     ];
 
@@ -134,7 +134,7 @@ class App extends Component {
         title: "Commandline Heros",
         text: "An original podcast about the people who transform technology from the command line up.",
         href: "https://www.redhat.com/en/command-line-heroes",
-        image: "images/screenshot-commandline-heros.png"
+        image: "images/screenshot-commandline-heros.webp"
       },
       {
         title: "Intellegence Squared",
